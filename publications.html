@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Vault - Vishruti Kakkad</title>
+  <meta name="theme-color" content="#050912" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="overlay" aria-hidden="true"></div>
+
+<div class="sidemenu" aria-label="Side menu">
+  <div class="burger" role="button" aria-label="Open menu" tabindex="0">
+    <div class="lines" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<div class="navdrawer" aria-hidden="true">
+  <div class="backdrop"></div>
+  <div class="panel" role="dialog" aria-label="Navigation">
+    <div class="head">
+      <b>VK://NAV</b>
+      <div class="x">CLOSE</div>
+    </div>
+    <div class="links">
+
+      <a class="navitem" href="index.html"><div class="left">Terminal</div><div class="tag">HOME</div></a>
+      <a class="navitem" href="projects.html"><div class="left">Projects</div><div class="tag">PROJECTS</div></a>
+      <a class="navitem" href="publications.html"><div class="left">Research Vault</div><div class="tag">RESEARCH</div></a>
+      <a class="navitem" href="research.html"><div class="left">Skills Vault</div><div class="tag">SKILLS</div></a>
+      <a class="navitem" href="education.html"><div class="left">Education</div><div class="tag">EDU</div></a>
+      <a class="navitem" href="about.html"><div class="left">About</div><div class="tag">ABOUT</div></a>
+
+</div>
+  </div>
+</div>
+<main id="content" class="wrap">
+  <div class="panelcard">
+    <div class="inner">
+      <div class="kicker">VK://RESEARCH_VAULT</div>
+      <h1>Publications</h1>
+      <div class="sub">A clean library of papers + thesis. Search, click, open.</div>
+
+      <div class="row">
+        <input class="input" id="q" placeholder="Search title / venue / year…" />
+        <div class="chip">impact metrics inside</div>
+      </div>
+
+      <div class="section">
+        <div id="vaultList" class="plist"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="backdrop"></div>
+  <div class="panel">
+    <div class="head">
+      <div>
+        <b id="mTitle">DETAIL</b>
+        <div class="dim" id="mSub"></div>
+      </div>
+      <div class="x" id="mClose">CLOSE</div>
+    </div>
+    <div class="body" id="mBody"></div>
+  </div>
+</div>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+window.VK_VAULT_ITEMS = [
+  {    id: "arxiv_aml_industry_academia",
+    title: "Comparative Insights on Adversarial Machine Learning from Industry and Academia: A User-Study Approach",
+    subtitle: "arXiv preprint • arXiv:2602.04753 [cs.CR]",
+    venue: "arXiv",
+    year: "2026",
+    metrics: "Preprint (not peer-reviewed)",
+    preview: "Industry professionals vs. students perspectives on AML vulnerabilities, with CTF-based educational approach for ML security.",
+    url: "https://arxiv.org/abs/2602.04753"
+  },
+  {    id: "thesis_aml",
+    title: "Defending Against Adversarial ML: Insights from Students vs. Professionals",
+    subtitle: "Master’s Thesis • Carnegie Mellon University",
+    venue: "KiltHub (CMU)",
+    year: "2023",
+    metrics: "Thesis (no journal impact factor)",
+    preview: "Master’s thesis exploring adversarial ML and defenses.",
+    url: "https://kilthub.cmu.edu/articles/thesis/Defending_Against_Adversarial_Machine_Learning_Insights_from_Students_vs_Professionals/23580210"
+  },
+  {
+    id: "ijit_biometric",
+    title: "Biometric Authentication and Image Encryption for Secure Cloud Storage",
+    subtitle: "International Journal of Information Technology (Springer)",
+    venue: "Springer",
+    year: "2019",
+    metrics: "Impact IF (Resurchify, 2024): 6.31 • SJR (SCImago, 2024): 0.63",
+    preview: "Biometrics + encryption workflow for securing cloud-stored images.",
+    url: "https://www.researchgate.net/publication/333007501_Biometric_authentication_and_image_encryption_for_image_security_in_cloud_framework",
+    metric: "IJIT IF: 6.31 (2024) / 1.007 (2022)"
+  },
+  {
+    id: "procs_game_applications",
+    title: "Game-Theoretic Applications in Cybersecurity and Cloud Computing",
+    subtitle: "Procedia Computer Science (Elsevier) • DOI: 10.1016/j.procs.2019.08.097",
+    venue: "ScienceDirect",
+    year: "2019",
+    metrics: "Impact IF (Resurchify, 2024): 2.66 • SJR (SCImago, 2024): 0.471",
+    preview: "Game theory applications for cyber security + cloud computing.",
+    url: "https://www.sciencedirect.com/science/article/pii/S1877050919310130",
+    metric: "Procedia CS: IF N/A • CiteScore 3"
+  },
+  {
+    id: "procs_survey_game_theory",
+    title: "Survey of Game-Theoretic Approaches in Data Mining and Network Security",
+    subtitle: "Procedia Computer Science (Elsevier) • DOI: 10.1016/j.procs.2019.08.098",
+    venue: "ScienceDirect",
+    year: "2019",
+    metrics: "Impact IF (Resurchify, 2024): 2.66 • SJR (SCImago, 2024): 0.471",
+    preview: "Survey / review of game-theoretic approaches in privacy + network security.",
+    url: "https://www.sciencedirect.com/science/article/pii/S1877050919310142",
+    metric: "Procedia CS: IF N/A • CiteScore 3"
+  }
+];
+</script>
+<script>window.VK_SHOW_CITATIONS = true;</script>
+<script src="assets/citations.js"></script>
+<script src="assets/vault.js"></script>
+</body></html>

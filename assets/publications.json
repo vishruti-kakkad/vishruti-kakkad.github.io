@@ -1,0 +1,53 @@
+[
+  {    "id": "arxiv_aml_industry_academia",
+    "title": "Comparative Insights on Adversarial Machine Learning from Industry and Academia: A User-Study Approach",
+    "subtitle": "arXiv preprint • arXiv:2602.04753 [cs.CR]",
+    "venue": "arXiv",
+    "year": "2026",
+    "metrics": "Preprint (not peer-reviewed)",
+    "preview": "Industry professionals vs. students perspectives on AML vulnerabilities, with CTF-based educational approach for ML security.",
+    "url": "https://arxiv.org/abs/2602.04753"
+  },
+  {    "id": "thesis_aml",
+    "title": "Defending Against Adversarial ML: Insights from Students vs. Professionals",
+    "subtitle": "Master’s Thesis • Carnegie Mellon University",
+    "venue": "KiltHub (CMU)",
+    "year": "2023",
+    "metrics": "Thesis (no journal impact factor)",
+    "preview": "Master’s thesis exploring adversarial ML and defenses.",
+    "url": "https://kilthub.cmu.edu/articles/thesis/Defending_Against_Adversarial_Machine_Learning_Insights_from_Students_vs_Professionals/23580210"
+  },
+  {
+    "id": "ijit_biometric",
+    "title": "Biometric Authentication and Image Encryption for Secure Cloud Storage",
+    "subtitle": "International Journal of Information Technology (Springer)",
+    "venue": "Springer",
+    "year": "2019",
+    "metrics": "Impact IF (Resurchify, 2024): 6.31 • SJR (SCImago, 2024): 0.63",
+    "preview": "Biometrics + encryption workflow for securing cloud-stored images.",
+    "url": "https://www.researchgate.net/publication/333007501_Biometric_authentication_and_image_encryption_for_image_security_in_cloud_framework",
+    "metric": "IJIT IF: 6.31 (2024) / 1.007 (2022)"
+  },
+  {
+    "id": "procs_game_applications",
+    "title": "Game-Theoretic Applications in Cybersecurity and Cloud Computing",
+    "subtitle": "Procedia Computer Science (Elsevier) • DOI: 10.1016/j.procs.2019.08.097",
+    "venue": "ScienceDirect",
+    "year": "2019",
+    "metrics": "Impact IF (Resurchify, 2024): 2.66 • SJR (SCImago, 2024): 0.471",
+    "preview": "Game theory applications for cyber security + cloud computing.",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1877050919310130",
+    "metric": "Procedia CS: IF N/A • CiteScore 3"
+  },
+  {
+    "id": "procs_survey_game_theory",
+    "title": "Survey of Game-Theoretic Approaches in Data Mining and Network Security",
+    "subtitle": "Procedia Computer Science (Elsevier) • DOI: 10.1016/j.procs.2019.08.098",
+    "venue": "ScienceDirect",
+    "year": "2019",
+    "metrics": "Impact IF (Resurchify, 2024): 2.66 • SJR (SCImago, 2024): 0.471",
+    "preview": "Survey / review of game-theoretic approaches in privacy + network security.",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1877050919310142",
+    "metric": "Procedia CS: IF N/A • CiteScore 3"
+  }
+]

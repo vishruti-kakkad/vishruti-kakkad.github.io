@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills Vault - Vishruti Kakkad</title>
+  <meta name="theme-color" content="#050912" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="overlay" aria-hidden="true"></div>
+
+<div class="sidemenu" aria-label="Side menu">
+  <div class="burger" role="button" aria-label="Open menu" tabindex="0">
+    <div class="lines" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<div class="navdrawer" aria-hidden="true">
+  <div class="backdrop"></div>
+  <div class="panel" role="dialog" aria-label="Navigation">
+    <div class="head">
+      <b>VK://NAV</b>
+      <div class="x">CLOSE</div>
+    </div>
+    <div class="links">
+
+      <a class="navitem" href="index.html"><div class="left">Terminal</div><div class="tag">HOME</div></a>
+      <a class="navitem" href="projects.html"><div class="left">Projects</div><div class="tag">PROJECTS</div></a>
+      <a class="navitem" href="publications.html"><div class="left">Research Vault</div><div class="tag">RESEARCH</div></a>
+      <a class="navitem" href="research.html"><div class="left">Skills Vault</div><div class="tag">SKILLS</div></a>
+      <a class="navitem" href="education.html"><div class="left">Education</div><div class="tag">EDU</div></a>
+      <a class="navitem" href="about.html"><div class="left">About</div><div class="tag">ABOUT</div></a>
+
+</div>
+  </div>
+</div>
+<main id="content" class="wrap">
+  <div class="panelcard">
+    <div class="inner">
+      <h1>Skills</h1>
+      <div class="sub">My technical arsenal across security, development, and operations.</div>
+
+      <div id="skillsSections" class="skills-grid"></div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="backdrop"></div>
+  <div class="panel">
+    <div class="head">
+      <div>
+        <b id="mTitle">DETAIL</b>
+        <div class="dim" id="mSub"></div>
+      </div>
+      <div class="x" id="mClose">CLOSE</div>
+    </div>
+    <div class="body" id="mBody"></div>
+  </div>
+</div>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  const S = (window.VK_DATA && window.VK_DATA.skills) ? window.VK_DATA.skills : {};
+  const container = document.getElementById('skillsSections');
+
+  function explode(item){
+    const s = (item||"").trim();
+    const m = s.match(/^([^:]{2,24}):\s*(.+)$/);
+    if(!m) return [s];
+    return m[2].split(",").map(x=>x.trim()).filter(Boolean);
+  }
+
+  // Render all categories with chips
+  Object.keys(S).forEach((category) => {
+    const raw = S[category] || "";
+    const chips = raw.split("•").map(x=>x.trim()).filter(Boolean).flatMap(explode);
+    
+    const section = document.createElement('div');
+    section.className = 'section';
+    
+    const h2 = document.createElement('h2');
+    h2.textContent = category;
+    section.appendChild(h2);
+    
+    const chipsDiv = document.createElement('div');
+    chipsDiv.className = 'chips';
+    
+    chips.forEach(c => {
+      const chip = document.createElement('span');
+      chip.className = 'chip';
+      chip.textContent = c;
+      chipsDiv.appendChild(chip);
+    });
+    
+    section.appendChild(chipsDiv);
+    container.appendChild(section);
+  });
+})();
+</script>
+</body></html>
