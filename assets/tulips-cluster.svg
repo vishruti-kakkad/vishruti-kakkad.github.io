@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="wc_lav" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#c8a8ff" stop-opacity="0.72"/>
+      <stop offset="55%" stop-color="#b79aff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#9d6dff" stop-opacity="0.12"/>
+    </radialGradient>
+    <radialGradient id="wc_peach" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#ffc9d9" stop-opacity="0.70"/>
+      <stop offset="55%" stop-color="#f5a8c8" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#e88bb4" stop-opacity="0.10"/>
+    </radialGradient>
+    <radialGradient id="wc_blush" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#f5d4e8" stop-opacity="0.82"/>
+      <stop offset="60%" stop-color="#e8b4d4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#c88bb8" stop-opacity="0.10"/>
+    </radialGradient>
+    <linearGradient id="stem" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a8c8a0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8fb088" stop-opacity="0.30"/>
+    </linearGradient>
+    <filter id="bleed" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Back tulip, lavender, taller -->
+  <g filter="url(#bleed)" opacity="0.88">
+    <path d="M 135 210 Q 110 180 118 140 Q 128 95 158 85 Q 178 120 172 165 Q 168 200 155 215 Z"
+          fill="url(#wc_lav)"/>
+    <path d="M 155 215 Q 152 180 166 150 Q 180 115 200 110 Q 212 150 202 195 Q 188 220 168 225 Z"
+          fill="url(#wc_lav)"/>
+    <path d="M 168 225 Q 178 195 200 175 Q 222 155 236 175 Q 228 215 208 240 Q 188 252 172 240 Z"
+          fill="url(#wc_lav)"/>
+    <path d="M 175 228 L 172 440" stroke="url(#stem)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 168 300 Q 135 315 110 370 Q 122 355 162 340 Q 175 330 172 310 Z"
+          fill="url(#stem)" opacity="0.55"/>
+  </g>
+
+  <!-- Middle tulip, peach -->
+  <g filter="url(#bleed)" opacity="0.85" transform="translate(40 80)">
+    <path d="M 200 320 Q 178 290 185 250 Q 195 210 220 204 Q 240 230 238 275 Q 232 310 218 322 Z"
+          fill="url(#wc_peach)"/>
+    <path d="M 218 322 Q 218 285 234 255 Q 250 225 272 225 Q 282 265 270 300 Q 254 325 232 328 Z"
+          fill="url(#wc_peach)"/>
+    <path d="M 232 328 Q 246 300 272 280 Q 294 265 306 290 Q 296 330 276 350 Q 256 358 238 345 Z"
+          fill="url(#wc_peach)"/>
+    <path d="M 245 335 L 242 560" stroke="url(#stem)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Front small tulip, blush -->
+  <g filter="url(#bleed)" opacity="0.82" transform="translate(-10 170)">
+    <path d="M 110 370 Q 95 348 100 318 Q 110 290 132 288 Q 145 308 142 342 Q 136 365 125 372 Z"
+          fill="url(#wc_blush)"/>
+    <path d="M 125 372 Q 126 348 140 325 Q 155 302 172 305 Q 178 330 170 358 Q 158 378 140 378 Z"
+          fill="url(#wc_blush)"/>
+    <path d="M 142 380 L 140 500" stroke="url(#stem)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Drifting petals -->
+  <ellipse cx="80" cy="480" rx="22" ry="14" fill="url(#wc_blush)" opacity="0.38" filter="url(#soft)" transform="rotate(-18 80 480)"/>
+  <ellipse cx="310" cy="450" rx="18" ry="10" fill="url(#wc_peach)" opacity="0.34" filter="url(#soft)" transform="rotate(22 310 450)"/>
+  <ellipse cx="270" cy="560" rx="15" ry="8" fill="url(#wc_lav)" opacity="0.30" filter="url(#soft)" transform="rotate(-12 270 560)"/>
+</svg>
